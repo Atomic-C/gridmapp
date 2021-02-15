@@ -15,7 +15,7 @@ public class GridMaker {
     private int numnberOfSquares;
 
     // Class constructor here
-    public GridMaker(int numberOfSquares){
+    public GridMaker(int numberOfSquares) {
 
         // Initiate rectangles variables here
         this.numnberOfSquares = numberOfSquares;
