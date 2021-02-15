@@ -8,9 +8,8 @@ public class Main {
         GridMaker gridMaker = new GridMaker(50);
         // With initialized values, start making, drawing rectangles
         gridMaker.makeRectangles();
-
         //
-        Marker marker = new Marker();
+        Marker marker = new Marker(gridMaker);
 
     }
 }

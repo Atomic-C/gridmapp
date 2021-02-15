@@ -56,5 +56,12 @@ public class GridMaker {
         }
 
     }
-
+    // This getter was made so Marker class can see the array positions
+    public Rectangle[][] getRectangles() {
+        return rectangles;
+    }
+    // This setter was made to change each array position, with Marker class
+    public void setRectangles(Rectangle[][] rectangles) {
+        this.rectangles = rectangles;
+    }
 }
