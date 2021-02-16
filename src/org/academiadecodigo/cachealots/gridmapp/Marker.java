@@ -56,9 +56,10 @@ public class Marker {
         Rectangle[][] rectangleHolder = gridMaker.getRectangles(); // TODO: How can I compare Marker and grid Rectangles?
 
         for (int i = 0; i < rectangleHolder.length; i++) {
-            for (int j = 0; j < rectangleHolder[i].length; j++) {
-
-                if(( rectangleHolder[i][j].getX() && rectangleHolder[i][j].getY() ) == markerRectangle.getX() && markerRectangle.getY()){
+            for (int j = 0; j < rectangleHolder[i].length; j++) { // Iterate over dual dimensional array...
+                    // here
+                if( rectangleHolder[i][j].getX() == markerRectangle.getX() && rectangleHolder[i][j].getY() == markerRectangle.getY()){ // When we find the cursor...
+                    // we can now paint!!!
 
                 }
 
