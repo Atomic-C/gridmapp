@@ -12,15 +12,15 @@ public class GridMaker {
     private int y;
     private int width;
     private int height;
-    private int numnberOfSquares;
+    private int numberOfSquares;
 
     // Class constructor here
     public GridMaker(int numberOfSquares) {
 
         // Initiate rectangles variables here
-        this.numnberOfSquares = numberOfSquares;
+        this.numberOfSquares = numberOfSquares;
 
-        this.rectangles = new Rectangle[this.numnberOfSquares][this.numnberOfSquares]; // numberOfSquares passed
+        this.rectangles = new Rectangle[this.numberOfSquares][this.numberOfSquares]; // numberOfSquares passed
 
         // Starter variables when initiating the grid position and square each size
         this.x = 10;
@@ -63,5 +63,13 @@ public class GridMaker {
     // This setter was made to change each array position, with Marker class
     public void setRectangles(Rectangle[][] rectangles) {
         this.rectangles = rectangles;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
     }
 }

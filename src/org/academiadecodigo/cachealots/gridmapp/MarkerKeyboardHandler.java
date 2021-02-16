@@ -17,20 +17,24 @@ public class MarkerKeyboardHandler implements KeyboardHandler {
 
         switch(keyboardEvent.getKey()) {
             case KeyboardEvent.KEY_RIGHT:
-                //marker.moveRight(); // Start moving methods here
+                marker.moveRight(); // Start moving methods here
                 System.out.println("RIGHT");
                 break;
             case KeyboardEvent.KEY_LEFT:
+                marker.moveLeft();
                 System.out.println("LEFT");
                 break;
             case KeyboardEvent.KEY_UP:
+                marker.moveUp();
                 System.out.println("UP");
                 break;
             case KeyboardEvent.KEY_DOWN:
+                marker.moveDown();
                 System.out.println("DOWN");
                 break;
             case KeyboardEvent.KEY_SPACE:
                 System.out.println("SPACE PRINT!");
+                marker.paint();
                 break;
         }
     }
