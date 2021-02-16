@@ -7,7 +7,7 @@ import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 public class GridMaker {
 
     // Class properties here
-    public Rectangle[][] rectangles;
+    public Rectangle[][] rectangles; //??
     private int x;
     private int y;
     private int width;
@@ -25,7 +25,7 @@ public class GridMaker {
         // Starter variables when initiating the grid position and square each size
         this.x = 10;
         this.y = 10;
-        this.height = 15;
+        this.height = 15; // TODO<. REFACTOR VARIABLE NAMES TO col and row?
         this.width = 15;
 
     }

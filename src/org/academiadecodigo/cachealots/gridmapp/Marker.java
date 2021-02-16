@@ -18,7 +18,7 @@ public class Marker {
        this.gridMaker = gridMaker;
 
 
-        // Starter variables when initiating the grid position and square each size
+        // Starter variables when initiating the grid position and square each size // We can use inheritance here
         this.x = 10;
         this.y = 10;
         this.height = 15;
@@ -53,14 +53,15 @@ public class Marker {
     }
 
     public void paint(){
-        Rectangle[][] rectangleHolder = gridMaker.getRectangles(); // TODO: How can I compare Marker and grid Rectangles?
+        Rectangle[][] rectangleHolder = gridMaker.getRectangles(); // TODO: How can I compare Marker and grid Rectangles? // HOW?!?!?
 
         for (int i = 0; i < rectangleHolder.length; i++) {
             for (int j = 0; j < rectangleHolder[i].length; j++) { // Iterate over dual dimensional array...
                     // here
                 if( rectangleHolder[i][j].getX() == markerRectangle.getX() && rectangleHolder[i][j].getY() == markerRectangle.getY()){ // When we find the cursor...
                     // we can now paint!!!
-
+                    rectangleHolder[i][j].setColor(Color.BLUE); // It's supposed to paint as we hover over for now
+                    rectangleHolder[i][j].fill();
                 }
 
             }
