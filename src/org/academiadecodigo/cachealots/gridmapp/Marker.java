@@ -63,6 +63,9 @@ public class Marker {
                     rectangleHolder[i][j].setColor(Color.BLUE); // It's supposed to paint as we hover over for now
                     rectangleHolder[i][j].fill();
                 }
+                if () { // When the grid is filled already...
+
+                }
 
             }
 
