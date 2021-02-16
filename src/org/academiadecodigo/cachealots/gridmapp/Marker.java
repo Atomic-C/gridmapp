@@ -53,23 +53,33 @@ public class Marker {
     }
 
     public void paint(){
-        Rectangle[][] rectangleHolder = gridMaker.getRectangles(); // TODO: How can I compare Marker and grid Rectangles? // HOW?!?!?
+        Rectangle[][] rectangleHolder = gridMaker.getRectangles(); // This holds the actual grid, since rectangleHolder is a different name for same reference
 
         for (int i = 0; i < rectangleHolder.length; i++) {
             for (int j = 0; j < rectangleHolder[i].length; j++) { // Iterate over dual dimensional array...
-                    // here
+
                 if( rectangleHolder[i][j].getX() == markerRectangle.getX() && rectangleHolder[i][j].getY() == markerRectangle.getY()){ // When we find the cursor...
-                    // we can now paint!!!
+                    // We can now paint!!!
                     rectangleHolder[i][j].setColor(Color.BLUE); // It's supposed to paint as we hover over for now
                     rectangleHolder[i][j].fill();
                 }
-                if () { // When the grid is filled already...
+            }
+        }
+    }
+        public void erase() {
+            Rectangle[][] rectangleHolder = gridMaker.getRectangles(); // This holds the actual grid, since rectangleHolder is a different name for same reference
 
+            for (int i = 0; i < rectangleHolder.length; i++) {
+                for (int j = 0; j < rectangleHolder[i].length; j++) { // Iterate over dual dimensional array...
+
+                    if (rectangleHolder[i][j].isFilled()) { // When the grid is filled already...
+                        // We can now erase!!!
+                        rectangleHolder[i][j].delete();
+                        rectangleHolder[i][j].draw();
+                    }
                 }
 
             }
-
         }
-    }
 
 }

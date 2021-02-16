@@ -36,6 +36,10 @@ public class MarkerKeyboardHandler implements KeyboardHandler {
                 System.out.println("SPACE PRINT!");
                 marker.paint();
                 break;
+            case KeyboardEvent.KEY_C:
+                System.out.println("Erase if filled!!!");
+                marker.erase();
+                break;
         }
     }
 
