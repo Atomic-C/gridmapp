@@ -30,11 +30,7 @@ public class Marker {
 
     }
 
-    //TODO:
-    //methods
-    //moveUp
-    //moveDown
-    //moveLeft
+    //TODO: Make SAVE S and LOAD L A THING!!!
 
     public void moveRight() {
         markerRectangle.translate(17, 0);
@@ -52,7 +48,7 @@ public class Marker {
         markerRectangle.translate(0, 17); // x and y change themselves
     }
 
-    public void paint(){
+    public void paint(){ // Paint method appended to space key
         Rectangle[][] rectangleHolder = gridMaker.getRectangles(); // This holds the actual grid, since rectangleHolder is a different name for same reference
 
         for (int i = 0; i < rectangleHolder.length; i++) {
@@ -66,20 +62,33 @@ public class Marker {
             }
         }
     }
-        public void erase() {
+        public void erase() { // Erase grid method appended to C key
             Rectangle[][] rectangleHolder = gridMaker.getRectangles(); // This holds the actual grid, since rectangleHolder is a different name for same reference
 
             for (int i = 0; i < rectangleHolder.length; i++) {
                 for (int j = 0; j < rectangleHolder[i].length; j++) { // Iterate over dual dimensional array...
 
-                    if (rectangleHolder[i][j].isFilled()) { // When the grid is filled already...
+                    if (rectangleHolder[i][j].isFilled()) { // When the grid is filled already... // TODO: CHECK WHY true or isFilled() works?!?
                         // We can now erase!!!
-                        rectangleHolder[i][j].delete();
-                        rectangleHolder[i][j].draw();
+                        //rectangleHolder[i][j].delete(); // Delete first, then
+                        rectangleHolder[i][j].draw(); // If we draw we don't need to delete first apparently.
                     }
                 }
-
             }
         }
+    public void eraseIfFilled() { // Erase individual rectangle if such one is filled
+        Rectangle[][] rectangleHolder = gridMaker.getRectangles(); // This holds the actual grid, since rectangleHolder is a different name for same reference
 
+        for (int i = 0; i < rectangleHolder.length; i++) {
+            for (int j = 0; j < rectangleHolder[i].length; j++) { // Iterate over dual dimensional array...
+
+                if (rectangleHolder[i][j].getX() == markerRectangle.getX() && rectangleHolder[i][j].getY() == markerRectangle.getY()) { // When the grid is filled already...
+                    // We can now erase!!!
+                    //rectangleHolder[i][j].delete(); // No need to delete before drawing.
+
+                    rectangleHolder[i][j].draw(); // If we draw we don't need to delete first apparently.
+                }
+            }
+        }
+    }
 }

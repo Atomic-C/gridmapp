@@ -15,7 +15,7 @@ public class Main {
         // With initialized values, start making, drawing rectangles
         gridMaker.makeRectangles();
 
-        Marker marker = new Marker(gridMaker); // TODO: SET DEFAULT CURSOR POSITION
+        Marker marker = new Marker(gridMaker); //  SET DEFAULT CURSOR POSITION
 
         Keyboard keyboard = new Keyboard(new MarkerKeyboardHandler(marker));
 
@@ -25,8 +25,13 @@ public class Main {
         keyboard.addEventListener(KeyboardEvent.KEY_DOWN, KeyboardEventType.KEY_PRESSED);
         keyboard.addEventListener(KeyboardEvent.KEY_SPACE, KeyboardEventType.KEY_PRESSED);
         keyboard.addEventListener(KeyboardEvent.KEY_C, KeyboardEventType.KEY_PRESSED);
+        //keyboard.addEventListener(KeyboardEvent.KEY_SPACE, KeyboardEventType.KEY_RELEASED);
+        keyboard.addEventListener(KeyboardEvent.KEY_V, KeyboardEventType.KEY_PRESSED);
 
-        //
+        // L load last grid
+        // S saves last grid
+        // C clear
+        // SPACE paint
 
     }
 }

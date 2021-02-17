@@ -36,8 +36,12 @@ public class MarkerKeyboardHandler implements KeyboardHandler {
                 System.out.println("SPACE PRINT!");
                 marker.paint();
                 break;
+            case KeyboardEvent.KEY_V:
+                System.out.println("Pressing V to delete individual rectangles");
+                marker.eraseIfFilled();
+                break;
             case KeyboardEvent.KEY_C:
-                System.out.println("Erase if filled!!!");
+                System.out.println("Pressing C to delete the whole grid");
                 marker.erase();
                 break;
         }
