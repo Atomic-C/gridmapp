@@ -1,6 +1,7 @@
 package org.academiadecodigo.cachealots.gridmapp;
 
 
+import org.academiadecodigo.cachealots.gridmapp.Sound;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
@@ -32,6 +33,14 @@ public class Main {
         // S saves last grid
         // C clear
         // SPACE paint
+
+        // Sound below this line
+        /*Sound sound = new Sound("/resources/seashantywellermanofficialmusicvideo.wav");
+        sound.play(true);
+
+        while (true){
+
+        }*/
 
     }
 }

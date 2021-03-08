@@ -6,10 +6,14 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 public class MarkerKeyboardHandler implements KeyboardHandler {
     // Class properties here
     private Marker marker;
+    private Sound eraseSound;
+    private Sound writeSound;
 
     // Constructor below
     public MarkerKeyboardHandler(Marker marker) {
         this.marker = marker;
+        this.eraseSound = new Sound("/resources/ERASER.wav");
+        this.writeSound = new Sound("/resources/button-21.wav");
     }
 
     @Override
@@ -35,6 +39,7 @@ public class MarkerKeyboardHandler implements KeyboardHandler {
             case KeyboardEvent.KEY_SPACE:
                 System.out.println("SPACE PRINT!");
                 marker.paint();
+                writeSound.play(true);
                 break;
             case KeyboardEvent.KEY_V:
                 System.out.println("Pressing V to delete individual rectangles");
@@ -43,6 +48,9 @@ public class MarkerKeyboardHandler implements KeyboardHandler {
             case KeyboardEvent.KEY_C:
                 System.out.println("Pressing C to delete the whole grid");
                 marker.erase();
+                eraseSound.play(true);
+
+
                 break;
         }
     }

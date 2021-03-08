@@ -30,7 +30,7 @@ public class Marker {
 
     }
 
-    //TODO: Make SAVE S and LOAD L A THING!!!
+    //TODO: Add some sound when interacting!!!
 
     public void moveRight() {
         markerRectangle.translate(17, 0);
