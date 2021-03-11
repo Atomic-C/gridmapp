@@ -27,40 +27,37 @@ public class MarkerKeyboardHandler implements KeyboardHandler {
             case KeyboardEvent.KEY_RIGHT:
                 marker.moveRight(); // Start moving methods here
                 moveSound.play(true); // We invoke sound here
-                System.out.println("RIGHT");
+                //System.out.println("RIGHT");
                 break;
             case KeyboardEvent.KEY_LEFT:
                 marker.moveLeft();
                 moveSound.play(true); // We invoke sound here
-                System.out.println("LEFT");
+                //System.out.println("LEFT");
                 break;
             case KeyboardEvent.KEY_UP:
                 marker.moveUp();
                 moveSound.play(true); // We invoke sound here
-                System.out.println("UP");
+                //System.out.println("UP");
                 break;
             case KeyboardEvent.KEY_DOWN:
                 marker.moveDown();
                 moveSound.play(true); // We invoke sound here
-                System.out.println("DOWN");
+                //System.out.println("DOWN");
                 break;
             case KeyboardEvent.KEY_SPACE:
-                System.out.println("SPACE PRINT!");
                 marker.paint();
                 writeSound.play(true); // We invoke sound here
-
+                //System.out.println("SPACE PRINT!");
                 break;
             case KeyboardEvent.KEY_V:
-                System.out.println("Pressing V to delete individual rectangles");
                 marker.eraseIfFilled();
                 eraseSoundSmall.play(true); // We invoke sound here
-
+                //System.out.println("Pressing V to delete individual rectangles");
                 break;
             case KeyboardEvent.KEY_C:
-                System.out.println("Pressing C to delete the whole grid");
                 marker.erase();
                 eraseSound.play(true); // We invoke sound here
-
+                //System.out.println("Pressing C to delete the whole grid");
                 break;
         }
     }

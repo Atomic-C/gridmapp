@@ -30,7 +30,6 @@ public class Marker {
 
     }
 
-    //TODO: Add some sound when interacting!!!
 
     public void moveRight() {
         markerRectangle.translate(17, 0);
