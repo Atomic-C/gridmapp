@@ -8,12 +8,16 @@ public class MarkerKeyboardHandler implements KeyboardHandler {
     private Marker marker;
     private Sound eraseSound;
     private Sound writeSound;
+    private Sound eraseSoundSmall;
+    private Sound moveSound;
 
     // Constructor below
     public MarkerKeyboardHandler(Marker marker) {
         this.marker = marker;
-        this.eraseSound = new Sound("/resources/ERASER.wav");
-        this.writeSound = new Sound("/resources/button-21.wav");
+        this.eraseSound = new Sound("/resources/dltebtn.wav");
+        this.eraseSoundSmall = new Sound("/resources/smalldltbtn.wav");
+        this.writeSound = new Sound("/resources/deepestbtnsnd.wav");
+        this.moveSound = new Sound("/resources/mvbttn.wav");
     }
 
     @Override
@@ -22,34 +26,40 @@ public class MarkerKeyboardHandler implements KeyboardHandler {
         switch(keyboardEvent.getKey()) {
             case KeyboardEvent.KEY_RIGHT:
                 marker.moveRight(); // Start moving methods here
+                moveSound.play(true); // We invoke sound here
                 System.out.println("RIGHT");
                 break;
             case KeyboardEvent.KEY_LEFT:
                 marker.moveLeft();
+                moveSound.play(true); // We invoke sound here
                 System.out.println("LEFT");
                 break;
             case KeyboardEvent.KEY_UP:
                 marker.moveUp();
+                moveSound.play(true); // We invoke sound here
                 System.out.println("UP");
                 break;
             case KeyboardEvent.KEY_DOWN:
                 marker.moveDown();
+                moveSound.play(true); // We invoke sound here
                 System.out.println("DOWN");
                 break;
             case KeyboardEvent.KEY_SPACE:
                 System.out.println("SPACE PRINT!");
                 marker.paint();
-                writeSound.play(true);
+                writeSound.play(true); // We invoke sound here
+
                 break;
             case KeyboardEvent.KEY_V:
                 System.out.println("Pressing V to delete individual rectangles");
                 marker.eraseIfFilled();
+                eraseSoundSmall.play(true); // We invoke sound here
+
                 break;
             case KeyboardEvent.KEY_C:
                 System.out.println("Pressing C to delete the whole grid");
                 marker.erase();
-                eraseSound.play(true);
-
+                eraseSound.play(true); // We invoke sound here
 
                 break;
         }
