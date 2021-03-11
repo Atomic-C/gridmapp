@@ -29,6 +29,9 @@ public class Main {
         //keyboard.addEventListener(KeyboardEvent.KEY_SPACE, KeyboardEventType.KEY_RELEASED);
         keyboard.addEventListener(KeyboardEvent.KEY_V, KeyboardEventType.KEY_PRESSED);
 
+        ReadWriteIO readWriteIO = new ReadWriteIO();
+        readWriteIO.writeFileByLine();
+
         // L load last grid
         // S saves last grid
         // C clear

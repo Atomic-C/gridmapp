@@ -21,7 +21,7 @@ public class ReadWriteIO {
         bWriter.flush(); // if the buffer is not full, flush will force disk write
         bWriter.close(); // auto-flush is done on close
 
-         
+
     }
 
 }
